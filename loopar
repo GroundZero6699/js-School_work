@@ -1,0 +1,70 @@
+function separateNumbersForLoop(arr)
+{
+    let evenArr = [];
+    let oddArr = [];
+    for (let i = 0; i < arr.length; i++)
+    {
+        if (arr[i] % 2 === 0)
+        {
+            evenArr.push(arr[i]);
+        }
+        else
+        {
+            oddArr.push(arr[i]);
+        }
+    }
+    console.log("Jämna nummer: " + evenArr);
+    console.log("Ojämna nummer: " + oddArr);
+}
+function separateNumbersWhileLoop(arr)
+{
+    let evenArr = [];
+    let oddArr = [];
+    let count = 0;
+    while (count < arr.length)
+    {
+        if (arr[count] % 2 === 0)
+        {
+            evenArr.push(arr[count]);
+        }
+        else
+        {
+            oddArr.push(arr[count]);
+        }
+        count++;
+    }
+    console.log("Jämna nummer: " + evenArr);
+    console.log("Ojämna nummer: " + oddArr);
+}
+function separateNumbersDoWhileLoop(arr)
+{
+    let evenArr = [];
+    let oddArr = [];
+    let count = 0;
+    do
+    {
+        if (arr[count] % 2 === 0)
+        {
+            evenArr.push(arr[count]);
+        }
+        else
+        {
+            oddArr.push(arr[count]);
+        }
+        count++;
+    }
+    while (count < arr.length);
+    console.log("Jämna nummer: " + evenArr);
+    console.log("Ojämna nummer: " + oddArr);
+}
+function printArray(arr)
+{
+    arr.forEach(function(element) {
+        console.log(element);
+    });
+}
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+separateNumbersForLoop(numbers);
+separateNumbersWhileLoop(numbers);
+separateNumbersDoWhileLoop(numbers);
+printArray(numbers);
